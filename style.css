@@ -1,0 +1,117 @@
+body, html { /* sets margins; enables smooth scrolling; sets a modern font */
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+}
+
+@keyframes gradientAnimation { /* keyframes for introduction section background grandient changes */
+    0% {
+      background-position: 0% 50%;
+    }
+    25% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 0% 50%;
+    }
+    75% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  #introduction { /* animates the introduction section background grandient changes */
+    background-size: 400% 400%;
+    background-image: linear-gradient(45deg,
+      #f6d6e9 0%,   /* pastel pink */
+      #fde2c8 14%,  /* pastel orange */
+      #fbf8cc 28%,  /* pastel yellow */
+      #e2f0cb 42%,  /* pastel green */
+      #cbe4f9 57%,  /* pastel blue */
+      #d6d6eb 71%,  /* pastel indigo */
+      #f5d6e9 85%,  /* pastel violet */
+      #f6d6e9 100%); /* pastel pink to create a smooth transition */
+    animation: gradientAnimation 30s ease infinite;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  .fade-in {
+    animation: fadeIn 1s forwards;
+  }
+
+  .fade-out {
+    animation: fadeOut 1s forwards;
+  }
+
+#introduction .text-container { /* sets introduction text block parameters */
+    margin: 0 auto;
+    text-align: center;
+}
+
+#introduction h1 { /* 'Hey there!' text parameters */
+    font-size: 5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0rem;
+}
+
+#introduction p { /* my name is and quip text parameters */
+    max-width: 90vw;
+    font-size: 3.5em;
+    color: #333;
+    margin: 0px;
+}
+
+#introduction p#dynamic-text { /* sets quip text color */
+    font-weight: normal;
+    margin-top: 5rem;
+    color: #0f0;
+}
+
+#dynamic-text {
+    background-color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 3rem;
+    white-space: pre-wrap; /* Adjusts white-space handling to wrap text */
+    overflow: hidden;
+    line-height: 1.5em; /* Adjust based on font size to fit exactly two lines */
+    height: 3.5em; /* 2 lines of text based on line-height */
+    width: 90vw; /* Adjust width as needed */
+    display: inline-flex; /* Use inline-flex to allow for text and cursor alignment */
+    align-items: center; /* Vertically center the text and cursor within the container */
+    justify-content: center; /* Center the content, but won't affect inline-flex items directly */
+    min-width: 0; /* Ensure it can shrink below its content size if necessary */
+}
+
+.cursor {
+    background-color: #0f0;
+    width: 8px; /* Adjust based on your font size for cursor width */
+    height: 1.2em; /* Adjust to match your text line-height for cursor height */
+    animation: blink 1s infinite steps(2, start);
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
