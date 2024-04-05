@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     requestAnimationFrame(updateBackgroundColor);
 
-    const quips = [ // introduction quip array
+    const quips = [ // introduction section quip array
         "and I am a cybersecurity analyst.",
         "and I am tired.",
         "and I am going crazy.",
@@ -38,21 +38,23 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const dynamicText = document.getElementById("dynamic-text");
-    const cursor = document.querySelector(".cursor");
-    let currentQuipIndex = 0; // Start with the first quip
+    dynamicText.innerHTML = "|"; // Initialize with cursor
+    let currentQuipIndex = -1; // Prepare to display the initial quip
 
     function typeQuip(quip) {
         let currentChar = 0;
-        dynamicText.textContent = ''; // Clear the text container
-        
+        dynamicText.innerHTML = ""; // Clear for the new quip
+
         function typeCharacter() {
             if (currentChar < quip.length) {
-                dynamicText.textContent += quip.charAt(currentChar);
+                dynamicText.innerHTML = quip.substring(0, currentChar + 1) + '<span class="cursor">|</span>';
                 currentChar++;
-                setTimeout(typeCharacter, 100); // Adjust typing speed
+                setTimeout(typeCharacter, 100); // Typing speed
             } else {
-                // Wait 2 seconds after typing finishes before starting the next quip
-                setTimeout(nextQuip, 2000);
+                // Finished typing. Prepare for the next quip with a delay
+                setTimeout(() => {
+                    nextQuip(); // Schedule the next quip
+                }, 2000); // 2-second delay after typing finishes
             }
         }
 
@@ -60,15 +62,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function nextQuip() {
-        // Display the initial quip on first load, then randomize
-        if (currentQuipIndex === 0 && !dynamicText.textContent) {
-            typeQuip("and I am a cybersecurity analyst."); // Display the first quip immediately on load
+        currentQuipIndex = (currentQuipIndex + 1) % (quips.length + 1); // Loop through quips, including the initial special one
+
+        if (currentQuipIndex === 0) {
+            // Special initial quip
+            typeQuip("and I am a cybersecurity analyst.");
         } else {
-            const randomIndex = Math.floor(Math.random() * quips.length);
-            typeQuip(quips[randomIndex]);
+            // Random quip from the list
+            const quip = quips[Math.floor(Math.random() * quips.length)];
+            typeQuip(quip);
         }
-        currentQuipIndex++; // Ensure the initial condition becomes false in subsequent calls
     }
 
-    nextQuip(); // Kick off the first quip
+    nextQuip(); // Start with the initial quip
 });

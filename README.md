@@ -1,10 +1,10 @@
-# Personal Site Version 4
+# Personal Site Version 4 
 
-## Overview
+## Overview 🖥️
 
 A sleek, open-source portfolio template for developers, built with HTML, CSS, and JS. Features sections for an introduction, resume, portfolio, and contact info.
 
-## Methodology
+## Methodology 🤔
 
 This code intendes to follow a simple, modular approach, ensuring that the code is easy to understand and well-commented. This makes it straightforward to update or change components according to personal needs or preferences.
 
