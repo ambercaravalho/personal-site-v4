@@ -62,12 +62,18 @@ body, html { /* sets margins; enables smooth scrolling; sets a modern font */
     font-size: 3.5em;
     color: #333;
     margin: 0px;
+    margin-bottom: 5rem;
 }
 
 #introduction p#dynamic-text { /* sets quip text color */
     font-weight: normal;
-    margin-top: 5rem;
     color: #0f0;
+}
+
+#dynamic-text-container {
+  display: table;
+  width: 100%;
+  height: 100vh; /* adjust based on your container's desired height */
 }
 
 #dynamic-text { /* draws the console section and sets quip text size */
@@ -81,63 +87,19 @@ body, html { /* sets margins; enables smooth scrolling; sets a modern font */
     line-height: 1.5em;
     height: 3.5em;
     width: 90vw;
-    display: flex;
+    display: table-cell;
     align-items: center;
     justify-content: center;
     min-width: 0;
     position: relative;
+    vertical-align: middle;
 }
 
-.cursor { /* create cursor that appears after the quip */
-    opacity: 1;
-    animation: blink-animation 1s infinite;
+.cursor {
+  display: inline-block; /* ensures cursor aligns correctly with text */
+  animation: blink-animation 1s infinite;
 }
 
-@keyframes blink-animation { /* keyframes to make the cursor blink */
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-.blink { /* makes the cursor blink */
-    animation: blink-animation 1s steps(5, start) infinite;
-}
-
-@keyframes slideInFromRight {
-    from {
-        right: -100%; /* start from outside the screen */
-        opacity: 0;
-    }
-    to {
-        right: 0; /* final position */
-        opacity: 1;
-    }
-}
-
-.intro-nav {
-    opacity: 0;
-    position: absolute;
-    font-style: italic;
-    z-index: 10; /* push on top */
-    font-size: 2.5rem;
-    margin-right: 5%;
-    top: 18vh;
-    text-align: right;
-    animation: slideInFromRight 0.5s ease-out forwards; /* use the animation */
-    animation-delay: 1s; /* delay the animation until after the page loads */
-}
-
-.intro-nav a {
-    display: block;
-    margin: 10px 0;
-    background-color: #333;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: background-color 0.3s, color 0.3s; /* smooth transition for color and background */
-}
-
-.intro-nav a:hover, .intro-nav a:focus {
-    background-color: #000000;
-    color: #ffffff;
-    text-decoration: none;
+@keyframes blink-animation {
+  50% { opacity: 0; }
 }
