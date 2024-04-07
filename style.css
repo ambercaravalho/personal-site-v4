@@ -122,6 +122,6 @@ body, html { /* sets margins; enables smooth scrolling; sets a modern font */
   }
 
   #introduction .text-container {
-      width: 85%; /* decrease width */
+      width: 85%; /* increase horizontal padding */
   }
 }

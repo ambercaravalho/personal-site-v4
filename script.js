@@ -50,10 +50,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentChar++;
                 setTimeout(typeCharacter, 100); // typing speed
             } else {
-                // finished typing. Prepare for the next quip with a delay
+                // finished typing, prepare for the next quip with a delay
                 setTimeout(() => {
-                    nextQuip(); // schedule the next quip
-                }, 5000); // 2-second delay after typing finishes
+                    nextQuip();
+                }, 5000); // 5-second delay after typing finishes
             }
         }
 
