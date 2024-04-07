@@ -24,7 +24,9 @@ body, html { /* sets margins; enables smooth scrolling; sets a modern font */
   }
 
   #introduction { /* animates the introduction section background grandient changes */
-    background-size: 400% 400%;
+    background-size: 200% 200%;
+    margin-top: -env(safe-area-inset-top); /* adjusts for the notch and status bar on iOS */
+    padding-top: env(safe-area-inset-top); /* adds padding to account for the status bar */ 
     background-image: linear-gradient(45deg,
       #f6d6e9 0%,   /* pastel pink */
       #fde2c8 14%,  /* pastel orange */
@@ -42,7 +44,7 @@ body, html { /* sets margins; enables smooth scrolling; sets a modern font */
     text-align: center;
     height: 100vh;
     position: relative;
-  }
+ }
 
 #introduction .text-container { /* sets introduction text block parameters */
     margin: 0 auto;
@@ -68,12 +70,6 @@ body, html { /* sets margins; enables smooth scrolling; sets a modern font */
 #introduction p#dynamic-text { /* sets quip text color */
     font-weight: normal;
     color: #0f0;
-}
-
-#dynamic-text-container {
-  display: table;
-  width: 100%;
-  height: 100vh; /* adjust based on your container's desired height */
 }
 
 #dynamic-text { /* draws the console section and sets quip text size */
@@ -105,40 +101,27 @@ body, html { /* sets margins; enables smooth scrolling; sets a modern font */
 }
 
 @media (max-width: 768px) {
-  #introduction h1 { /* Adjust 'Hey there!' text size for smaller screens */
-      font-size: 4rem; /* Smaller font size on mobile */
+  #introduction h1 { /* adjust 'Hey there!' text size for smaller screens */
+      font-size: 4rem; 
   }
 
-  #introduction p { /* Adjust name and quip text size for smaller screens */
-      font-size: 2rem; /* Smaller font size on mobile */
-      margin-bottom: 5rem; /* Reduce bottom margin */
+  #introduction p { /* adjust name and quip text size for smaller screens */
+      font-size: 2rem;
   }
 
-  #dynamic-text { /* Adjust console section and text size for smaller screens */
-      font-size: 2rem; /* Smaller font size for the dynamic text */
-      padding: 5px; /* Reduce padding */
-      line-height: normal; /* Adjust line height for better readability */
-      max-width: 90vw; /* Ensure it doesn't exceed the viewport width */
-      background-color: #000;
-      font-family: 'Courier New', Courier, monospace;
-      border-radius: 5px;
-      white-space: pre-wrap;
-      overflow: hidden;
+  #dynamic-text { /* adjust console section and text size for smaller screens */
+      font-size: 2rem;
+      padding: 5px;
+      line-height: normal;
+      max-width: 90vw;
       height: 6em;
-      display: table-cell;
-      align-items: center;
-      justify-content: center;
-      min-width: 0;
-      position: relative;
-      vertical-align: middle;
   }
 
-  .cursor { /* Ensure the cursor size matches the adjusted text size */
-      font-size: 2rem; /* Match the dynamic text font size */
+  .cursor { /* ensure the cursor size matches the adjusted text size */
+      font-size: 2rem;
   }
 
   #introduction .text-container {
-      width: 85%; /* Increase width to use more screen space */
-      margin: 0 auto; /* Center the container */
+      width: 85%; /* decrease width */
   }
 }
