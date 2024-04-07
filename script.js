@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // finished typing. Prepare for the next quip with a delay
                 setTimeout(() => {
                     nextQuip(); // schedule the next quip
-                }, 2000); // 2-second delay after typing finishes
+                }, 5000); // 2-second delay after typing finishes
             }
         }
 
