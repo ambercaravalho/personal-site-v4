@@ -1,6 +1,7 @@
 # Personal Website (V4)
 
-![Introduction Section Screenshot](introduction_section_screenshot.png)
+<p align="center">
+<img src="https://github.com/ambercaravalho/personal-site-v4/raw/main/introduction_section_screenshot.png" width="600">
 
 ## Overview 🖥️
 
