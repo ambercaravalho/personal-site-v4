@@ -1,0 +1,59 @@
+---
+// Basic metadata for the site
+
+interface Props {
+	title: string;
+  language: string;
+  description: string;
+}
+
+const { title, language, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang={language} class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+    <meta property="og:type" content="website" />
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    
+    <meta property="og:description" name="twitter:description" content={description} />
+    <meta name="creator" content="Amber Caravalho" />
+    <meta property="og:title" content="Amber Caravalho - Cybersecurity Analyst" />
+    <meta property="og:site_name" content="Amber Caravalho - Cybersecurity Analyst" />
+    <meta property="og:locale" content="en" />
+		<meta name="generator" content={Astro.generator} />
+    <meta name="twitter:title" content="Amber Caravalho - Cybersecurity Analyst" />
+    <meta name="theme-color" content="#e1a028" />
+    <meta name="apple-mobile-web-app-status-bar" content="#e1a028" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="author" content="Amber Caravalho" />
+    <link rel="author" href="https://ambercaravalho.com" />
+    <link rel="canonical" href="https://ambercaravalho.com" />
+    <link rel="preconnect" href="https://ambercaravalho.com">
+
+    <link rel="manifest" href="/site.webmanifest" />
+     <meta
+      name="keywords"
+      content="cybersecurity,threat-analysis,network-security,incident-response,risk-management, enterprise-security,Python,PowerShell,SEIM,agile,Scrum,endpoint-security,CompTIA,digital-literacy,leadership,security,military,air-force,DEIA,project-management,innovation,optimization,readiness"
+    />
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+
+	<body class="bg-[#F7F2F2] dark:bg-[#09030E] transition duration-300 ease-in-out">
+    <article class="bg-[url('/assets/noise.gif')] fixed top-0 left-0 w-full h-screen opacity-[0.025] z-[999] pointer-events-none"></article>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	html {
+	font-family: 'Poppins', sans-serif;
+	}
+</style>
