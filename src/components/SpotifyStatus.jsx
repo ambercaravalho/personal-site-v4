@@ -6,7 +6,6 @@ import { getInfo } from "../services/getInfo";
 export const SpotifyStatus = () => {
   const [activityData, setActivityData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [language, setLanguage] = useState("en");
 
   // Fetches Spotify data
   useEffect(() => {
@@ -38,7 +37,7 @@ export const SpotifyStatus = () => {
     return (
       <>
         <p class="text-[#ffffff] font-bold text-xs lg:text-2xl md:text-xl">Loading...</p>
-        <img loading="lazy" class="absolute w-full h-full top-0 left-0 object-center object-cover z-[-1]" src="../assets/spotify-offline.jpeg" alt="Spotify Album"></img>
+        <img loading="lazy" class="absolute w-full h-full top-0 left-0 object-center object-cover z-[-1]" src="../assets/spotify-offline.jpeg" alt="Generic Spotify Album Cover"></img>
       </>
     );
   }
@@ -49,12 +48,8 @@ export const SpotifyStatus = () => {
       <div>
         <p class="text-[#ffffff] font-bold text-xs lg:text-2xl md:text-xl">
           {activityData?.data?.spotify === null
-            ? language === "en"
-              ? "Recently listened"
-              : "Escuchado recientemente"
-            : language === "en"
-            ? "Listening now"
-            : "Escuchando ahora"}
+          ? "Recently Listened"
+          : "Listening Now"}
         </p>
         <div class="flex flex-col gap-1">
           <p class="text-[#ffffff] w-full xl:text-xl lg:text-lg text-xs font-semibold truncate">

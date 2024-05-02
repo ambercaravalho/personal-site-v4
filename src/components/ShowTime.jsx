@@ -73,9 +73,7 @@ function ShowTime() {
     return (
       <div class="bg-[#089cffa4] w-full flex overflow-hidden bg-clip-padding text-white py-2 px-4 lg:p-8`">
         <div class="flex flex-col justify-center lg:h-full w-2/3 absolute lg:static z-10">
-          <p class="text-white capitalize text-xs md:text-xl lg:text-2xl font-semibold lg:mb-0">
-            {language === "en" ? "Loading.." : "Cargando.."}
-          </p>
+          <p class="text-white capitalize text-xs md:text-xl lg:text-2xl font-semibold lg:mb-0">Loading...</p>
         </div>
         <div class="absolute right-0 top-0 flex z-0 items-center w-full h-full overflow-hidden justify-end">
           <div class="TimeCard_hot__Br_X1 TimeCard_container__bLNa3 w-20 h-20 md:w-56 md:h-56 right-5">
@@ -94,20 +92,14 @@ function ShowTime() {
         hourConditional >= 8 && hourConditional <= 18
           ? "bg-[#089cffa4]"
           : "bg-[#001324]"
-      } w-full flex overflow-hidden bg-clip-padding text-white py-2 px-4 lg:p-8`}
-    >
-      <div class="flex flex-col justify-center lg:h-full w-2/3 absolute lg:static z-10">
+      } w-full flex overflow-hidden bg-clip-padding text-white py-2 px-4 lg:p-8`}>
+
+      <div class="flex flex-col justify-center lg:h-full absolute lg:static z-10">
         <div>
-          <p class="text-lg md:text-5xl lg:text-7xl font-bold">
-            {weather?.temp}°
-          </p>
-          <p class="capitalize text-xs md:text-xl lg:text-2xl font-semibold lg:mb-0">
-            {language === "en" ? weather?.weather : weather?.weatherEs}
-          </p>
+          <p class="text-lg md:text-5xl lg:text-7xl font-bold">{weather?.temp}°</p>
+          <p class="capitalize text-xs md:text-xl lg:text-2xl font-semibold lg:mb-0">{weather?.weather}</p>
           <p class="text-xs md:text-md lg:text-lg">{currentHours}</p>
-          <p class="text-xs md:text-md lg:text-lg">
-            {language === "en" ? "In Seattle" : "En Seattle"}
-          </p>
+          <p class="text-xs md:text-md lg:text-lg">In Seattle, WA</p>
         </div>
       </div>
 
