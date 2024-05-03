@@ -93,9 +93,9 @@ function getHoursConditional() {
       <div class="flex flex-col justify-center lg:h-full absolute lg:static z-10">
         <div>
           <p class="text-lg md:text-5xl lg:text-7xl font-bold">{weather?.temp}°</p>
-          <p class="capitalize text-xs md:text-xl lg:text-2xl font-semibold lg:mb-0">{weather?.weather}</p>
-          <p class="text-xs md:text-md lg:text-lg">{currentHours}</p>
-          <p class="text-xs md:text-md lg:text-lg">In Seattle, WA</p>
+          <p class="capitalize text-xs md:text-2xl lg:text-2xl font-semibold lg:mb-0">{weather?.weather}</p>
+          <p class="text-xs md:text-lg lg:text-lg">{currentHours}</p>
+          <p class="text-xs md:text-lg lg:text-lg">In Seattle, WA</p>
         </div>
       </div>
 
