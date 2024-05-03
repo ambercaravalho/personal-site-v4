@@ -1,38 +1,34 @@
 // Builds the Spotify widget
 
 import { useState, useEffect } from "preact/hooks";
-import { getInfo } from "../services/getInfo";
+import { getCurrentTrack } from "../services/getSpotify";
 
 export const SpotifyStatus = () => {
-  const [activityData, setActivityData] = useState(null);
+  const [trackData, setTrackData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Fetches Spotify data from Lanyard's (Discord) API
   useEffect(() => {
     const fetchData = async () => {
+      console.log("Initiating data fetch...");
       try {
-        const data = await getInfo();
-        setActivityData(data);
+        const data = await getCurrentTrack();
+        console.log("Data received from Spotify API:", data);
+        setTrackData(data);
         setIsLoading(false);
-
       } catch (err) {
         console.error("Spotify Data Fetch Error Details: ", err);
         setIsLoading(false);
       }
     };
 
-    // Initial fetch
     fetchData();
-
-    // Refreshes data every 5 minutes
     const interval = setInterval(fetchData, 300000);
-
     return () => {
       clearInterval(interval);
+      console.log("Cleaned up interval for fetching Spotify data");
     };
   }, []);
 
-  // Displays generic album cover and text if loading
   if (isLoading) {
     return (
       <>
@@ -42,36 +38,25 @@ export const SpotifyStatus = () => {
     );
   }
 
-  // Displays Spotify data if available
   return (
     <div class="flex flex-col">
-        <div class="flex flex-col gap-4">
-          <p class="text-[#ffffff] font-bold text-xs lg:text-3xl md:text-xl">
-            {activityData?.data?.spotify === null
-            ? "Recently Listened 🎧"
-            : "Listening Now 🎧"}
-          </p>
-          <p class="text-[#ffffff] w-full lg:text-2xl text-xs font-semibold truncate">
-            {activityData?.data?.spotify === null
-              ? "Taylor Swift"
-              : activityData?.data?.spotify.song}
-          </p>
-        </div>
-        <div>
-          <p class="text-[#ffffff] w-full lg:text-2xl text-xs truncate">
-            {activityData?.data?.spotify === null
-              ? "The Tortured Poets Department"
-              : activityData?.data?.spotify.artist}
-          </p>
-        </div>
+      <div class="flex flex-col gap-4">
+        <p class="text-[#ffffff] font-bold text-xs lg:text-3xl md:text-xl">
+          {trackData?.songTitle ? "Listening Now 🎧" : "Recently Listened 🎧"}
+        </p>
+        <p class="text-[#ffffff] w-full lg:text-2xl text-xs font-semibold truncate">
+          {trackData?.songTitle || "Nothing playing"}
+        </p>
+      </div>
+      <div>
+        <p class="text-[#ffffff] w-full lg:text-2xl text-xs truncate">
+          {trackData?.artist || "No artist information"}
+        </p>
+      </div>
       <img
         loading="lazy"
         class="absolute w-full h-full top-0 left-0 object-center object-cover z-[-1]"
-        src={
-          activityData?.data?.spotify === null
-            ? "../assets/spotify-offline.jpeg"
-            : `${activityData?.data?.spotify.album_art_url}`
-        }
+        src={trackData?.albumArtwork || "../assets/spotify-offline.jpeg"}
         alt="Spotify Album"
       ></img>
     </div>
