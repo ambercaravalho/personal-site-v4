@@ -7,7 +7,7 @@
 ## Overview 🖥️
 Every six months or so I get inspired by a new design and choose to entirely scrap the old version of my personal portfolio site. This is the fourth (!) revision of that process; check out some of my prior versions here:
 
-* [Version 1 (Built on WordPress 6.1)](https://web.archive.org/web/20230513131828/https://ambercaravalho.com/)
+- [Version 1 (Built on WordPress 6.1)](https://web.archive.org/web/20230513131828/https://ambercaravalho.com/)
     - I learned a bunch about self-hosting servers as well as the first shreds of web design.
 - [Version 2 (Built on WordPress 6.2)](https://v2.ambercaravalho.com)
     - I wanted to replicate a *nix Bash terminal through its use of text-based user interface elements.
