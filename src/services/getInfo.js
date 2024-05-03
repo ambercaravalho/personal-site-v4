@@ -1,5 +1,4 @@
-// function to fetch Spotify data from Last.fm API.
-
+// Function to fetch Spotify data from Last.fm API and load the largest album art possible.
 export const getInfo = async () => {
   try {
     // Last.fm API URL
@@ -7,45 +6,45 @@ export const getInfo = async () => {
       "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=AmberIsWayward&api_key=5c8a423522ff4a475f65a0f267981c69&format=json"
     );
 
-    // check if response returned an error
+    // Check if response returned an error
     if (!response.ok) {
       throw new Error("Error getting Spotify data from Last.fm API");
     }
 
-    // parse JSON
+    // Parse JSON
     const data = await response.json();
     
-    // get the most recent track
-    const recentTrack = data.recenttracks.track[0]; 
+    // Extract relevant information from the response
+    const recentTrack = data.recenttracks.track[0]; // Get the most recent track
 
-    // get the largest album art URL
+    // Get the largest album art URL
     let largestAlbumArtUrl = "";
     if (recentTrack.image && recentTrack.image.length > 0) {
       largestAlbumArtUrl = recentTrack.image[recentTrack.image.length - 1]["#text"] || "";
     }
 
-    // extract song and artist URLs if available
+    // Extract song and artist URLs if available
     let songUrl = "";
     let artistUrl = "";
 
     if (recentTrack.url) {
-      // if the song has a URL, use it
+      // If the song has a URL, use it
       songUrl = recentTrack.url;
     }
 
     if (recentTrack.artist.url) {
-      // if the artist has a URL property, use it
+      // If the artist has a URL property, use it
       artistUrl = recentTrack.artist.url;
     } else {
-      // if the artist name has a URL-encoded format, construct the Last.fm artist URL
+      // If the artist name has a URL-encoded format, construct the Last.fm artist URL
       const encodedArtistName = encodeURIComponent(recentTrack.artist["#text"]);
       artistUrl = `https://www.last.fm/music/${encodedArtistName}`;
     }
 
-    // determine whether the user is currently listening
+    // Determine whether the user is currently listening
     const nowPlaying = recentTrack["@attr"] && recentTrack["@attr"].nowplaying === "true";
 
-    // normalize the data
+    // Normalize the data
     const normalizedData = {
       data: {
         spotify: {
@@ -54,7 +53,7 @@ export const getInfo = async () => {
           album_art_url: largestAlbumArtUrl,
           songUrl: songUrl,
           artistUrl: artistUrl,
-          nowPlaying: nowPlaying.toString()
+          nowPlaying: nowPlaying ? "true" : "false" // Set to "false" if not playing
         }
       }
     };

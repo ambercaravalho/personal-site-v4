@@ -1,4 +1,4 @@
-// builds the Spotify widget
+// Builds the Spotify widget
 
 import { useState, useEffect } from "preact/hooks";
 import { getInfo } from "../services/getInfo";
@@ -7,7 +7,7 @@ export const SpotifyStatus = () => {
   const [activityData, setActivityData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  // fetch Spotify data from Last.fm API
+  // Fetches Spotify data from Last.fm API
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -21,10 +21,10 @@ export const SpotifyStatus = () => {
       }
     };
 
-    // initial fetch
+    // Initial fetch
     fetchData();
 
-    // refrest data every 5 minutes
+    // Refreshes data every 5 minutes
     const interval = setInterval(fetchData, 300000);
 
     return () => {
@@ -32,7 +32,10 @@ export const SpotifyStatus = () => {
     };
   }, []);
 
-  // display generic album cover and text if loading
+  // Determine whether the user is currently listening or recently listened
+  const isListeningNow = activityData?.data?.spotify?.nowPlaying === "true";
+
+  // Displays generic album cover and text if loading
   if (isLoading) {
     return (
       <>
@@ -42,17 +45,15 @@ export const SpotifyStatus = () => {
     );
   }
 
-  // determine whether the user is currently listening
-  const isListeningNow = activityData?.data?.spotify?.nowPlaying === "true";
-
-  // determine the text to display based on whether the user is currently listening
-  const displayText = isListeningNow ? "Listening Now 🎧" : "Recently Listened 🎧";
-
-  // display Spotify data if available
+  // Displays Spotify data if available
   return (
     <div class="flex flex-col">
         <div class="flex flex-col gap-4">
-          <p class="text-[#ffffff] font-bold text-xs lg:text-3xl md:text-xl">{displayText}</p>
+          <p class="text-[#ffffff] font-bold text-xs lg:text-3xl md:text-xl">
+            {isListeningNow
+            ? "Listening Now 🎧"
+            : "Recently Listened 🎧"}
+          </p>
           <a href={activityData?.data?.spotify?.songUrl} target="_blank" rel="noopener noreferrer" class="text-[#ffffff] w-full lg:text-2xl text-xs font-semibold truncate">
             {activityData?.data?.spotify.song}
           </a>
