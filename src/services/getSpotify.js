@@ -1,5 +1,9 @@
 import fetch from 'node-fetch';
 
+// Hardcoded credentials for Spotify API
+const clientId = 'af0ee28f584b42838f102393a6e02468';
+const clientSecret = '7b0dcc489e9d4a14bad084a2db98ee45';
+
 // Helper function to encode credentials
 const encodeCredentials = (clientId, clientSecret) => {
     return Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
@@ -9,7 +13,7 @@ const encodeCredentials = (clientId, clientSecret) => {
 const getSpotifyAccessToken = async () => {
     const url = 'https://accounts.spotify.com/api/token';
     const headers = {
-        'Authorization': `Basic ${encodeCredentials(process.env.SPOTIFY_CLIENT_ID, process.env.SPOTIFY_CLIENT_SECRET)}`,
+        'Authorization': `Basic ${encodeCredentials(clientId, clientSecret)}`,
         'Content-Type': 'application/x-www-form-urlencoded',
     };
     const body = 'grant_type=client_credentials';

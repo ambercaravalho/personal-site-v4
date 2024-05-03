@@ -3,9 +3,7 @@
 export const getWeather = async () => {
   try {
     // API URL
-    const apiKey = process.env.OPEN_WEATHER_API_KEY;
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=Seattle&lang=en&units=imperial&appid=${apiKey}`;
-
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=Seattle&lang=en&units=imperial&appid=53504ce05c11aa5efc84eea6f2b461c2`;
 
     // Fetch API
     const res = await fetch(url)
