@@ -9,13 +9,6 @@ function ShowTime() {
   const [hourConditional, setHourConditional] = useState(getHoursConditional());
   const [weather, setWeather] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [language, setLanguage] = useState("en");
-
-  // Sets language
-  useEffect(() => {
-    const userLanguage = document.documentElement.getAttribute("lang");
-    setLanguage(userLanguage);
-  }, []);
 
   // Fetches weather data
   useEffect(() => {
@@ -52,21 +45,24 @@ function ShowTime() {
     };
   }, []);
 
-  // Formats time
-  function getCurrentHours() {
-    const currentTime = new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
-    const hours = currentTime.split(", ")[1].split(":")[0].padStart(2, '0');
-    const minutes = currentTime.split(":")[1];
+// Formats time
+function getCurrentHours() {
+  const currentTime = new Date().toLocaleString("en-US", { 
+    hour12: false, 
+    timeZone: "America/Los_Angeles",
+    hour: '2-digit', 
+    minute: '2-digit'
+  });
 
-    return `${hours}:${minutes} hrs PT`;
-  }
+  return `${currentTime} hrs PT`;
+}
 
-  function getHoursConditional() {
-    const currentTime = getCurrentHours();
-    const currentHour = parseInt(currentTime.split(":")[0]);
+function getHoursConditional() {
+  const currentTime = getCurrentHours();
+  const currentHour = parseInt(currentTime.split(":")[0]);
 
-    return currentHour;
-  }
+  return currentHour;
+}
 
   // Displays when fetching data
   if (isLoading) {

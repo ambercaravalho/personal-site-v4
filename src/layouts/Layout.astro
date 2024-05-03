@@ -35,11 +35,7 @@ const { title, language, description } = Astro.props;
     <link rel="canonical" href="https://ambercaravalho.com" />
     <link rel="preconnect" href="https://ambercaravalho.com">
 
-    <link rel="manifest" href="/site.webmanifest" />
-     <meta
-      name="keywords"
-      content="cybersecurity,threat-analysis,network-security,incident-response,risk-management, enterprise-security,Python,PowerShell,SEIM,agile,Scrum,endpoint-security,CompTIA,digital-literacy,leadership,security,military,air-force,DEIA,project-management,innovation,optimization,readiness"
-    />
+    <meta name="keywords" content="cybersecurity,threat-analysis,network-security,incident-response,risk-management, enterprise-security,Python,PowerShell,SEIM,agile,Scrum,endpoint-security,CompTIA,digital-literacy,leadership,security,military,air-force,DEIA,project-management,innovation,optimization,readiness"/>
     
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -47,7 +43,7 @@ const { title, language, description } = Astro.props;
 	</head>
 
 	<body class="bg-[#F7F2F2] dark:bg-[#09030E] transition duration-300 ease-in-out">
-    <article class="bg-[url('/assets/noise.gif')] fixed top-0 left-0 w-full h-screen opacity-[0.025] z-[999] pointer-events-none"></article>
+    <article class="fixed top-0 left-0 w-full h-screen opacity-[0.025] z-[999] pointer-events-none"></article>
 		<slot />
 	</body>
 </html>

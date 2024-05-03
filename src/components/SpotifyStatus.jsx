@@ -7,7 +7,7 @@ export const SpotifyStatus = () => {
   const [activityData, setActivityData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Fetches Spotify data
+  // Fetches Spotify data from Lanyard's (Discord) API
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -36,34 +36,34 @@ export const SpotifyStatus = () => {
   if (isLoading) {
     return (
       <>
-        <p class="text-[#ffffff] font-bold text-xs lg:text-2xl md:text-xl">Loading...</p>
-        <img loading="lazy" class="absolute w-full h-full top-0 left-0 object-center object-cover z-[-1]" src="../assets/spotify-offline.jpeg" alt="Generic Spotify Album Cover"></img>
+        <p class="text-[#ffffff] font-bold text-xs lg:text-3xl md:text-xl">Loading...</p>
+        <img loading="lazy" class="absolute w-full h-full top-0 left-0 object-center object-cover z-[-1]" src="../assets/spotify-generic.jpeg" alt="Generic Spotify Album Cover"></img>
       </>
     );
   }
 
   // Displays Spotify data if available
   return (
-    <div class="flex flex-col gap-4">
-      <div>
-        <p class="text-[#ffffff] font-bold text-xs lg:text-2xl md:text-xl">
-          {activityData?.data?.spotify === null
-          ? "Recently Listened"
-          : "Listening Now"}
-        </p>
-        <div class="flex flex-col gap-1">
-          <p class="text-[#ffffff] w-full xl:text-xl lg:text-lg text-xs font-semibold truncate">
+    <div class="flex flex-col">
+        <div class="flex flex-col gap-4">
+          <p class="text-[#ffffff] font-bold text-xs lg:text-3xl md:text-xl">
+            {activityData?.data?.spotify === null
+            ? "Recently Listened 🎧"
+            : "Listening Now 🎧"}
+          </p>
+          <p class="text-[#ffffff] w-full lg:text-2xl text-xs font-semibold truncate">
             {activityData?.data?.spotify === null
               ? "Taylor Swift"
               : activityData?.data?.spotify.song}
           </p>
-          <p class="text-[#ffffff] w-full xl:text-xl lg:text-lg text-xs truncate">
+        </div>
+        <div>
+          <p class="text-[#ffffff] w-full lg:text-2xl text-xs truncate">
             {activityData?.data?.spotify === null
               ? "The Tortured Poets Department"
               : activityData?.data?.spotify.artist}
           </p>
         </div>
-      </div>
       <img
         loading="lazy"
         class="absolute w-full h-full top-0 left-0 object-center object-cover z-[-1]"

@@ -4,7 +4,7 @@ export const getInfo = async () => {
   try {
     // API URL
     const response = await fetch(
-      "https://api.lanyard.rest/v1/users/334914085328257026"
+      "https://api.lanyard.rest/v1/users/940729244760297523"
     );
 
     // Check if response returned an error
