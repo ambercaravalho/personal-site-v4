@@ -1,8 +1,14 @@
 # Personal Portfolio (V4)
 
+[![Deploy Astro site to Pages](https://github.com/ambercaravalho/personal-site-v4/actions/workflows/astro-deploy-to-github-pages.yml/badge.svg?branch=main)](https://github.com/ambercaravalho/personal-site-v4/actions/workflows/astro-deploy-to-github-pages.yml)
+
 ![Homepage Screenshot](readme-screenshot.png)
 
+<div align="center">
+
 ### [Visit the Live Site ➡️](https://ambercaravalho.github.io/personal-site-v4/)
+
+</div>
 
 ## Overview 🖥️
 Every six months or so I get inspired by a new design and choose to entirely scrap the old version of my personal portfolio site. This is the fourth (!) revision of that process; check out some of my prior versions here:

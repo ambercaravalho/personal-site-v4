@@ -6,7 +6,7 @@ export const getWeather = async () => {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=Seattle&lang=en&units=imperial&appid=53504ce05c11aa5efc84eea6f2b461c2`;
 
     // Fetch API
-    const res = await fetch(url);
+    const res = await fetch(url)
     if (!res.ok) {
       throw { status: res.status, statusText: res.statusText };
     }

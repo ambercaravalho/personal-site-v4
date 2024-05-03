@@ -7,7 +7,7 @@ export const SpotifyStatus = () => {
   const [activityData, setActivityData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Fetches Spotify data from Lanyard's (Discord) API
+  // Fetches Spotify data from Last.fm API
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -32,6 +32,9 @@ export const SpotifyStatus = () => {
     };
   }, []);
 
+  // Determine whether the user is currently listening or recently listened
+  const isListeningNow = activityData?.data?.spotify?.nowPlaying === "true";
+
   // Displays generic album cover and text if loading
   if (isLoading) {
     return (
@@ -46,31 +49,27 @@ export const SpotifyStatus = () => {
   return (
     <div class="flex flex-col">
         <div class="flex flex-col gap-4">
-          <p class="text-[#ffffff] font-bold text-xs lg:text-3xl md:text-xl">
-            {activityData?.data?.spotify === null
-            ? "Recently Listened 🎧"
-            : "Listening Now 🎧"}
+          <p class="text-[#ffffff] font-bold text-lg lg:text-3xl md:text-2xl">
+            {isListeningNow
+            ? "Listening Now 🎧"
+            : "Recently Played 🎛️"}
           </p>
-          <p class="text-[#ffffff] w-full lg:text-2xl text-xs font-semibold truncate">
-            {activityData?.data?.spotify === null
-              ? "Taylor Swift"
-              : activityData?.data?.spotify.song}
-          </p>
+          <a href={activityData?.data?.spotify?.songUrl} target="_blank" rel="noopener noreferrer" class="text-[#ffffff] w-full lg:text-2xl md:text-lg text-md font-semibold truncate">
+            {activityData?.data?.spotify.song}
+          </a>
         </div>
         <div>
-          <p class="text-[#ffffff] w-full lg:text-2xl text-xs truncate">
-            {activityData?.data?.spotify === null
-              ? "The Tortured Poets Department"
-              : activityData?.data?.spotify.artist}
-          </p>
+          <a href={activityData?.data?.spotify?.artistUrl} target="_blank" rel="noopener noreferrer" class="text-[#ffffff] w-full lg:text-2xl md:text-lg text-md truncate">
+            {activityData?.data?.spotify.artist}
+          </a>
         </div>
       <img
         loading="lazy"
         class="absolute w-full h-full top-0 left-0 object-center object-cover z-[-1]"
         src={
-          activityData?.data?.spotify === null
-            ? "../assets/spotify-offline.jpeg"
-            : `${activityData?.data?.spotify.album_art_url}`
+          activityData?.data?.spotify.album_art_url
+            ? activityData?.data?.spotify.album_art_url
+            : "../assets/spotify-offline.jpeg"
         }
         alt="Spotify Album"
       ></img>
