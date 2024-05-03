@@ -1,13 +1,11 @@
 # Personal Website (V4)
 
 <p align="center">
-<img src="https://github.com/ambercaravalho/personal-site-v4/raw/html/introduction_section_screenshot.png" width="600">
+<img src="https://github.com/ambercaravalho/personal-site-v4/raw/legacy-html/introduction_section_screenshot.png" width="600">
 
 ## Overview 🖥️
 
 Welcome to the repository for my personal website, hosted on GitHub Pages. This site is a single-page application designed to showcase my portfolio, resume, and provide a means of contact through a simple form. 
-
-### [Visit the Live Site ➡️](https://ambercaravalho.github.io/personal-site-v4/)
 
 ## Methodology 🤔
 
