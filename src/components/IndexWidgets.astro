@@ -1,9 +1,9 @@
 ---
 // Widgets for the index page
 
-import DarkMode from "./DarkMode.astro"
-import { SpotifyStatus } from "./SpotifyStatus"
-import ShowTime from "./WeatherStatus"
+import DarkMode from "./DarkModeWidget.astro"
+import { SpotifyStatus } from "./SpotifyWidget"
+import ShowTime from "./WeatherWidget"
 ---
 
 <!-- About Me Widget -->
@@ -15,9 +15,9 @@ import ShowTime from "./WeatherStatus"
     <div class="md:w-8/12 p-2 md:px-8 md:py-4 flex flex-col justify-start md:justify-end">
       <div class="flex flex-col md:gap-1 lg:gap-2">
         <h1 class="text-2xl font-bold md:text-2xl lg:text-3xl">Hey there! My name is</h1>
-        <h2 class="text-pink-400 text-3xl font-bold md:text-4xl lg:text-6xl">Amber 💖</h2>
+        <h2 class="text-pink-400 text-4xl font-bold lg:text-6xl">Amber 💖</h2>
       </div>
-      <p class="pt-2 lg:pt-4 md:text-lg lg:text-xl">I'm experienced in securing large-scale networks, managing cybersecurity systems, and leading diverse teams.</p>
+      <p class="pt-2 text-lg lg:pt-4 lg:text-xl">I'm experienced in securing large-scale networks, managing cybersecurity systems, and leading diverse teams.</p>
     </div>
     <p class="px-2 md:px-8 md:text-lg lg:text-xl hidden sm:block">I also love exploring new web technologies and experimenting with design (check out my projects and GitHub below!)</p>
   </div>

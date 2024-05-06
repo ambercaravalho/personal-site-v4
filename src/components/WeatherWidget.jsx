@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "preact/hooks";
 import { getWeather } from "../services/getWeather";
-import "./Styles.css";
+import "./WeatherStyle.css";
 
 function ShowTime() {
   const [currentHours, setCurrentHours] = useState(getCurrentHours());
