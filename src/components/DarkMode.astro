@@ -38,17 +38,20 @@
     localStorage.setItem('theme', theme);
   };
 
-
-  if (currentTheme === 'dark') {
-    setTheme('dark');
-
-    document.getElementById('themeToggle').checked = true;
+  // Initial theme setup
+  if (currentTheme) {
+    // If there's a theme saved in localStorage, use it
+    setTheme(currentTheme);
+    document.getElementById('themeToggle').checked = (currentTheme === 'dark');
   } else {
-    setTheme('light');
-
-    document.getElementById('themeToggle').checked = false;
+    // If no theme in localStorage, set it based on the system preference
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = prefersDarkMode ? 'dark' : 'light';
+    setTheme(initialTheme);
+    document.getElementById('themeToggle').checked = prefersDarkMode;
   }
 
+  // Toggle theme on user interaction
   const handleToggleClick = () => {
     const isDark = document.documentElement.classList.contains('dark');
     setTheme(isDark ? 'light' : 'dark');
