@@ -49,17 +49,17 @@ export const SpotifyStatus = () => {
   return (
     <div class="flex flex-col">
         <div class="flex flex-col gap-4">
-          <p class="text-[#ffffff] font-bold text-xl lg:text-3xl md:text-2xl">
+          <p class="text-[#ffffff] font-bold text-3xl">
             {isListeningNow
             ? "Listening Now 🎧"
             : "Recently Played 🎛️"}
           </p>
-          <a href={activityData?.data?.spotify?.songUrl} target="_blank" rel="noopener noreferrer" class="text-[#ffffff] w-full lg:text-2xl md:text-lg text-lg font-semibold truncate">
+          <a href={activityData?.data?.spotify?.songUrl} target="_blank" rel="noopener noreferrer" class="text-[#ffffff] w-full text-2xl font-semibold truncate">
             {activityData?.data?.spotify.song}
           </a>
         </div>
         <div>
-          <a href={activityData?.data?.spotify?.artistUrl} target="_blank" rel="noopener noreferrer" class="text-[#ffffff] w-full lg:text-2xl md:text-lg text-lg truncate">
+          <a href={activityData?.data?.spotify?.artistUrl} target="_blank" rel="noopener noreferrer" class="text-[#ffffff] w-full text-2xl truncate">
             {activityData?.data?.spotify.artist}
           </a>
         </div>
