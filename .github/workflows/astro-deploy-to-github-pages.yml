@@ -49,6 +49,7 @@ jobs:
           else
             echo "Unable to determine package manager"
             exit 1
+          fi
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -70,7 +71,6 @@ jobs:
         env:
           PUBLIC_LAST_FM_API_KEY: ${{ secrets.PUBLIC_LAST_FM_API_KEY }}
           PUBLIC_OPEN_WEATHER_API_KEY: ${{ secrets.PUBLIC_OPEN_WEATHER_API_KEY }}
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
