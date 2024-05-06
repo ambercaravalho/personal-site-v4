@@ -1,9 +1,11 @@
 // Function to fetch Spotify data from Last.fm API and load the largest album art possible.
+
 export const getInfo = async () => {
   try {
     // Last.fm API URL
+    const apiKey = import.meta.env.PUBLIC_LAST_FM_API_KEY;
     const response = await fetch(
-      "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=AmberIsWayward&api_key=5c8a423522ff4a475f65a0f267981c69&format=json"
+      `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=AmberIsWayward&api_key=${apiKey}&format=json`
     );
 
     // Check if response returned an error

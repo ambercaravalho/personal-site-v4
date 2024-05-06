@@ -1,7 +1,7 @@
 // Builds the Spotify widget
 
 import { useState, useEffect } from "preact/hooks";
-import { getInfo } from "../services/getInfo";
+import { getInfo } from "../services/getSpotify";
 
 export const SpotifyStatus = () => {
   const [activityData, setActivityData] = useState(null);
@@ -69,7 +69,7 @@ export const SpotifyStatus = () => {
         src={
           activityData?.data?.spotify.album_art_url
             ? activityData?.data?.spotify.album_art_url
-            : "../assets/spotify-offline.jpeg"
+            : "../assets/spotify-generic.jpeg"
         }
         alt="Spotify Album"
       ></img>

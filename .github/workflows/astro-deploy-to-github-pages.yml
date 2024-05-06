@@ -68,6 +68,9 @@ jobs:
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
+        env:
+          PUBLIC_LAST_FM_API_KEY: ${{ secrets.PUBLIC_LAST_FM_API_KEY }}
+          PUBLIC_OPEN_WEATHER_API_KEY: ${{ secrets.PUBLIC_OPEN_WEATHER_API_KEY }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
