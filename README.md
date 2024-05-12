@@ -1,6 +1,6 @@
 # Personal Portfolio (V4)
 
-[![Deploy Astro site to Pages](https://github.com/ambercaravalho/personal-site-v4/actions/workflows/astro-deploy-to-github-pages.yml/badge.svg?branch=main)](https://github.com/ambercaravalho/personal-site-v4/actions/workflows/astro-deploy-to-github-pages.yml)
+[![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build) [![Deploy Astro site to Pages](https://github.com/ambercaravalho/personal-site-v4/actions/workflows/astro-deploy-to-github-pages.yml/badge.svg?branch=main)](https://github.com/ambercaravalho/personal-site-v4/actions/workflows/astro-deploy-to-github-pages.yml)
 
 ![Homepage Screenshot](readme-screenshot.png)
 

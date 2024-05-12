@@ -1,14 +1,202 @@
 ---
-// Imports modules and displays them on initial page load
+// Imports layout and widgets for the index page
 
-import AboutMe from '../components/IndexWidgets.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/layout.astro';
+
+import DarkMode from "../components/index/DarkModeWidget.astro"
+import { SpotifyStatus } from "../components/index//SpotifyWidget"
+import ShowTime from "../components/index/WeatherWidget"
 ---
 
+<!-- BEGINS FORMATTED SECTION -->
 <Layout title="Amber Caravalho - Cybersecurity Analyst" language="en" description="Discover my experience in securing large-scale networks, managing complex cybersecurity systems, and leading diverse teams. Check out some of my personal projects that reflect my ingenuity and creativity.">
 	<main class="flex flex-col m-5">
     <section class="grid max-w-screen-lg lg:grid-cols-4 md:grid-cols-4 grid-cols-2 gap-2 md:gap-4 my-5 mx-auto lg:px-20">
-      <AboutMe/>
+
+<!-- About Me Widget -->
+<article class="bg-white dark:bg-[#0D1116] dark:text-white relative border-2 dark:border-[#30363D] lg:col-span-3 md:col-span-3 col-span-2 aspect-auto md:row-span-2 rounded-3xl overflow-hidden p-4 transition duration-300 delay-75 ease-in-out"> 
+  <div class="lg:float-right md:float-right float-center lg:pt-16 pr-2">
+    <img loading="lazy" class="w-auto h-20 md:h-40 lg:h-48" src="assets/photo-large.png" alt="Avatar Amber Caravalho">
+  </div>
+  <div class="lg:absolute lg:bottom-16">
+    <div class="md:w-8/12 p-2 md:px-8 md:py-4 flex flex-col justify-start md:justify-end">
+      <div class="flex flex-col md:gap-1 lg:gap-2">
+        <h1 class="text-2xl font-bold md:text-2xl lg:text-3xl">Hey there! My name is</h1>
+        <h2 class="text-pink-400 text-4xl font-bold lg:text-6xl">Amber 💖</h2>
+      </div>
+      <p class="pt-2 text-lg lg:pt-4 lg:text-xl">I'm experienced in securing large-scale networks, managing cybersecurity systems, and leading diverse teams.</p>
+    </div>
+    <p class="px-2 md:px-8 md:text-lg lg:text-xl hidden sm:block">I also love exploring new web technologies and experimenting with design (check out my projects and GitHub below!)</p>
+  </div>
+</article>
+
+<!-- LinkedIn Widget -->
+<a href="https://www.linkedin.com/in/ambercaravalho/" class="bg-[#0077b6] border-2 dark:border-[#30363D] dark:bg-[#0353a4] text-white flex flex-col justify-center items-center rounded-2xl relative col-span-1 aspect-square text-center p-4 lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="sm:scale-175">
+    <svg xmlns="http://www.w3.org/2000/svg"  class="inline-flex w-14 md:w-10" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+      <path d="M8 11l0 5"></path>
+      <path d="M8 8l0 .01"></path>
+      <path d="M12 16l0 -5"></path>
+      <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+    </svg>
+  </div>
+</a>
+
+<!-- Dark Mode Widget -->
+<DarkMode/>
+
+<!-- Projects Widget -->
+<a href="https://v3.ambercaravalho.com/rl_gallery/the_portfolio_desktop/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" width="480" height="480" class="absolute w-480 h-360 object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/coding.gif" alt="Projects Amber Caravalho">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">My Projects</h3>
+    <p class="text-white text-lg md:text-xl lg:text-2xl">I'm always up to something, though it's rarely good (or well written). 😬</p>
+  </div>
+</a>
+
+<!-- GitHub Widget -->
+<a href="https://github.com/ambercaravalho" class="relative lg:h-48 md:h-48 h-40 rounded-2xl col-span-2 row-span-1 overflow-hidden  border-2 dark:border-[#30363D] lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="absolute w-full h-full bg-[#00000077]">
+    <img loading="lazy" width="498" height="280" class="absolute w-full h-full object-cover object-center top-0 left-0 -z-10" style="color:transparent" src="/assets/giphy.gif" alt="GitHub Amber Caravalho">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h2 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">GitHub</h2>
+    <p class="text-white text-lg md:text-xl lg:text-2xl">Check my code - it's open source and available to judge! (pls be nice)</p>
+  </div>
+</a>
+
+<!-- Spotify Widget -->
+<article class="relative flex flex-col justify-between aspect-square p-6 lg:p-8 rounded-2xl md:col-span-2 col-span-2 row-span-1 overflow-hidden bg-[#0000008f] border-2 dark:border-[#30363D] transition duration-300 delay-75 ease-in-out">
+  <div>
+    <svg stroke="currentColor" fill="#159F48" class="w-12" stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.669 11.538a.498.498 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686zm.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858zm.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288z"></path>
+    </svg>
+  </div>
+    <SpotifyStatus client:visible/>
+  </div>
+</article>
+
+<!-- Stacked Widgets //PLACEHOLDERS: REPLACE WITH OTHER WIDGETS IN THE FUTURE -->
+<article class="col-span-1 sm:col-span-1 flex flex-col justify-between gap-2 md:gap-4">
+  <a href="https://www.linkedin.com/in/ambercaravalho/" class="bg-[#0077b6]  border-2 dark:border-[#30363D] dark:bg-[#0353a4] text-white flex flex-col justify-center items-center rounded-2xl relative col-span-1 aspect-square text-center p-4 lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+    <div class="sm:scale-175">
+      <svg xmlns="http://www.w3.org/2000/svg"  class="inline-flex w-14 md:w-10" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+        <path d="M8 11l0 5"></path>
+        <path d="M8 8l0 .01"></path>
+        <path d="M12 16l0 -5"></path>
+        <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+      </svg>
+    </div>
+  </a>
+
+  <a href="https://www.linkedin.com/in/ambercaravalho/" class="bg-[#0077b6]  border-2 dark:border-[#30363D] dark:bg-[#0353a4] text-white flex flex-col justify-center items-center rounded-2xl relative col-span-1 aspect-square text-center p-4 lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+    <div class="sm:scale-175">
+      <svg xmlns="http://www.w3.org/2000/svg"  class="inline-flex w-14 md:w-10" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+        <path d="M8 11l0 5"></path>
+        <path d="M8 8l0 .01"></path>
+        <path d="M12 16l0 -5"></path>
+        <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+      </svg>
+    </div>
+  </a>
+</article>
+
+<!-- Weather Widget -->
+<article class="rounded-3xl flex relative overflow-hidden col-span-1 border-2 dark:border-[#30363D] transition duration-300 delay-75 ease-in-out">
+  <ShowTime client:visible/>
+</article>
+
+<!-- Experience Widget -->
+<article class="rounded-2xl flex relative overflow-hidden aspect-square shadow-sm bg-[#6DD2B7] p-4 text-white justify-center items-center border-2 dark:border-[#30363D] dark:bg-[#0D1116] transition duration-300 delay-75 ease-in-out">
+  <div class="flex justify-center items-center flex-col">
+    <p class="text-6xl md:text-8xl font-bold">5+</p>
+    <p class="text-lg md:text-xl uppercase font-semibold text-center">years of experience</p>
+  </div>
+</article>
+
+<!-- Contact Widget -->
+<a href="/assets/amber-caravalho-contact-card.vcf" download="amber-caravalho-contact-card.vcf" class="border-2 bg-[#E96A97] text-white dark:border-[#30363D] dark:bg-[#0D1116] dark:text-white rounded-2xl relative w-full p-4 col-span-1 flex flex-col justify-center items-center aspect-square text-center font-bold lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out">
+  <div class="absolute top-3 right-3 dark:bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-white dark:stroke-black w-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+      <path d="M7 11l5 5l5 -5"></path>
+      <path d="M12 4l0 12"></path>
+    </svg>
+  </div>
+    <div class="absolute top-3 left-3">
+      <p class="lg:text-xl md:text-xl text-lg font-bold">Add Contact</p>
+    </div>
+      <div class="sm:scale-175">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="inline-flex w-12 md:w-10"><path stroke-linecap="round" stroke-linejoin="round" d="M4,21a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H5A1,1,0,0,0,4,3ZM12,7.5a2,2,0,1,1-2,2A2,2,0,0,1,12,7.5ZM8.211,16.215a4,4,0,0,1,7.578,0A.993.993,0,0,1,14.83,17.5H9.18A1,1,0,0,1,8.211,16.215Z"></path></svg>
+      </div>
+  </div>
+</a>
+
+<!-- Resume Widget -->
+<a href="/assets/ambercaravalho-resume.pdf" class="border-2 bg-white dark:border-[#30363D] dark:bg-[#0D1116] dark:text-white rounded-2xl relative w-full p-4 col-span-1 flex flex-col justify-center items-center aspect-square text-center font-bold lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="absolute top-3 right-3 dark:bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black w-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+      <path d="M7 11l5 5l5 -5"></path>
+      <path d="M12 4l0 12"></path>
+    </svg>
+  </div>
+    <div class="absolute top-3 left-3">
+      <p class="lg:text-xl md:text-xl text-lg font-bold">My Resume</p>
+    </div>
+      <div class="sm:scale-175">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="inline-flex w-14 md:w-10"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+      </div>
+  </div>
+</a>
+
+<!-- Email Widget -->
+<a class="border-2 bg-orange-400 dark:border-[#30363D] dark:bg-[#0D1116] dark:text-white text-white rounded-2xl relative w-full p-4 col-span-1 flex flex-col justify-center items-center aspect-square text-center lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" href="mailto:me@ambercaravalho.com" target="_blank">
+  <div class="absolute top-3 right-3 bg-white rounded-full p-1">
+     <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black w-4" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="absolute top-3 left-3">
+    <p class="lg:text-xl md:text-xl text-lg font-bold">Email Me</p>
+  </div>
+    <div class="sm:scale-175">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-white inline-flex w-14 md:w-10" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
+        <path d="M3 7l9 6l9 -6"></path>
+      </svg>
+    </div>
+</a>
+
     </section>
 	</main>
+
+<!-- ENDS FORMATTED SECTION -->
 </Layout>
