@@ -40,7 +40,7 @@ export const SpotifyStatus = () => {
     return (
       <>
         <p class="text-[#ffffff] font-bold text-xs lg:text-3xl md:text-xl">Loading...</p>
-        <img loading="lazy" class="absolute w-full h-full top-0 left-0 object-center object-cover z-[-1]" src="../assets/spotify-generic.jpeg" alt="Generic Spotify Album Cover"></img>
+        <img loading="lazy" class="absolute w-full h-full top-0 left-0 object-center object-cover z-[-1]" src="../assets/index/spotify-generic.jpeg" alt="Generic Spotify Album Cover"></img>
       </>
     );
   }
