@@ -1,7 +1,7 @@
 // Builds the weather and time widget
 
 import { useState, useEffect } from "preact/hooks";
-import { getWeather } from "../services/getWeather";
+import { getWeather } from "./getWeather";
 import "./WeatherStyle.css";
 
 function ShowTime() {

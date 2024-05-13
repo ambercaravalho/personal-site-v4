@@ -1,7 +1,7 @@
 // Builds the Spotify widget
 
 import { useState, useEffect } from "preact/hooks";
-import { getInfo } from "../services/getSpotify";
+import { getInfo } from "./getSpotify";
 
 export const SpotifyStatus = () => {
   const [activityData, setActivityData] = useState(null);

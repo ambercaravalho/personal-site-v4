@@ -1,0 +1,276 @@
+---
+// Imports layout for the index page
+
+import Layout from '../layouts/layout.astro';
+
+import DarkMode from "../components/projects/DarkModeWidgetProjects.astro"
+---
+
+<!-- BEGINS FORMATTED SECTION -->
+<Layout title="Amber Caravalho - Projects" language="en" description="Check out some of my personal projects that reflect my ingenuity and creativity.">
+	<main class="flex flex-col m-5">
+    <section class="grid max-w-screen-lg lg:grid-cols-4 md:grid-cols-4 grid-cols-2 gap-2 md:gap-4 my-5 mx-auto lg:px-20">
+      
+<!-- About Projects Widget -->
+<article class="bg-white dark:bg-[#0D1116] dark:text-white relative border-2 dark:border-[#30363D] lg:col-span-3 md:col-span-3 col-span-2 aspect-auto md:row-span-2 rounded-3xl overflow-hidden p-4 transition duration-300 delay-75 ease-in-out"> 
+  <div class="md:w-8/12 p-2 md:px-8 md:py-4 flex flex-col justify-start md:justify-end">
+    <div class="flex flex-col md:gap-1 lg:gap-2">
+      <h1 class="text-2xl font-bold md:text-2xl lg:text-3xl">inwrk</h1>
+      <h2 class="text-blue-500 text-4xl font-bold lg:text-7xl">PROJECTS</h2>
+    </div>
+    <p class="pt-2 text-lg lg:pt-4 lg:text-xl">oh god, you found my projects! i am no pro and just make stuff as a hobby.</p>
+  </div>
+</article>
+
+<!-- Back Button Widget -->
+<a href="/" class="bg-green-300 border-2 dark:border-[#30363D] dark:bg-green-400 text-white flex flex-col justify-center items-center rounded-2xl relative col-span-1 lg:h-32 h-28 text-center p-4 lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out">
+  <div class="sm:scale-175">
+    <svg xmlns="http://www.w3.org/2000/svg"  class="inline-flex w-14 md:w-10" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> 
+      <path d="M9.00002 15.3802H13.92C15.62 15.3802 17 14.0002 17 12.3002C17 10.6002 15.62 9.22021 13.92 9.22021H7.15002" stroke="#292D32" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> 
+      <path d="M8.57 10.7701L7 9.19012L8.57 7.62012" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </div>
+</a>
+
+<!-- Dark Mode Widget -->
+<DarkMode/>
+
+<!-- Project 13 -->
+<a href="https://ambercaravalho.github.io/personal-site-v4/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-v4-screenshot.jpg" alt="Project 13">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Current Website [Version 4]</h3>
+    <p class="text-white text-lg md:text-xl lg:text-2xl">The fourth version of my portfolio, designed in the bento box style and written in the Astro framework.</p>
+  </div>
+</a>
+
+<!-- Project 12 -->
+<a href="https://webgl.ambercaravalho.com" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/webgl-screenshot.png" alt="Project 12">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Project Web Design [WebGL Experiments]</h3>
+    <p class="text-white text-lg md:text-xl lg:text-2xl">Messing around (and learning) with WebGL. Built with Three.js and Ammo.js.</p>
+  </div>
+</a>
+
+<!-- Project 11 -->
+<a href="https://clock.ambercaravalho.com" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/authorclock-screenshot.jpg" alt="Project 11">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Project Web Design [Open Author Clock]</h3>
+    <p class="text-white text-lg md:text-xl lg:text-2xl">A project to bring literary quotes to every minute of your day. Built on HTML, CSS, and JavaScript.</p>
+  </div>
+</a>
+
+<!-- Project 10 -->
+<a href="https://pogpt.ambercaravalho.com" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/pogpt-screenshot.jpg" alt="Project 10">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Application Development [POGPT Suite]</h3>
+    <p class="text-white text-lg md:text-xl lg:text-2xl">The Portable Operational GPT Suite. Built on Docker, Open WebUI, Ollama, and LLaVA.</p>
+  </div>
+</a>
+
+<!-- Project 9 -->
+<a href="https://corgevity.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/corgevity_new-screenshot.png" alt="Project 9">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Corporate Web Design [Corgevity]</h3>
+    <p class="text-white text-lg md:text-xl lg:text-2xl">Corgevity provides cybersecurity services. Built on WordPress 6.3 in the Gutenberg editor.</p>
+  </div>
+</a>
+
+<!-- Project 8 -->
+<a href="https://v3.ambercaravalho.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-v3-screenshot.jpg" alt="Project 8">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">The Vault [Version 3]</h3>
+    <p class="text-white text-lg md:text-xl lg:text-2xl">The third version of ambercaravalho.com. Built on WordPress 6.3 in the Gutenberg editor.</p>
+  </div>
+</a>
+
+<!-- Project 7 -->
+<a href="https://jblecybergames.ambercaravalho.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-jblecybergames-screenshot.png" alt="Project 7">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Event Web Design [JBLE Cyber Games]</h3>
+    <p class="text-white text-lg md:text-xl lg:text-2xl">Promoting the JBLE Cyber Games CTF event. Built on WordPress 6.3 in the Gutenberg editor.</p>
+  </div>
+</a>
+
+<!-- Project 6 -->
+<a href="https://v2.ambercaravalho.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-v2-screenshot.png" alt="Project 7">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">The Vault [Version 2]</h3>
+    <p class="text-white text-lg md:text-xl lg:text-2xl">The second version of ambercaravalho.com. Built on WordPress 6.2 in the Gutenberg editor.</p>
+  </div>
+</a>
+
+<!-- Project 5 -->
+<a href="https://bravoexodus.com" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-exodus-screenshot.png" alt="Project 5">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Application Development [Project Exodus]</h3>
+    <p class="text-white text-lg md:text-xl lg:text-2xl">Project Exodus is a human capital management solution. Built on Docker and Apache Superset.</p>
+  </div>
+</a>
+
+<!-- Project 4 -->
+<a href="https://web.archive.org/web/20230513131828/https://ambercaravalho.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-v1-screenshot.png" alt="Project 4">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">The Vault [Version 1]</h3>
+    <p class="text-white text-lg md:text-xl lg:text-2xl">The original version of ambercaravalho.com. Built on WordPress 6.1 in the Gutenberg editor.</p>
+  </div>
+</a>
+
+<!-- Project 3 -->
+<a href="https://web.archive.org/web/20210622024457/https://marymotivates.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-marymotivates-screenshot.png" alt="Project 3">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Organization Web Design [MaryMotivates]</h3>
+    <p class="text-white text-lg md:text-xl lg:text-2xl">MaryMotivates motivated and empowered local youth. Built on WordPress 5.0 in the Divi editor.</p>
+  </div>
+</a>
+
+<!-- Project 2 -->
+<a href="http://www.services4fitnessequipment.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-swzservice-screenshot.png" alt="Project 2">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Business Web Design [SWZ Service]</h3>
+    <p class="text-white text-lg md:text-xl lg:text-2xl">SWZ Service provides cycling, fitness, and snow repair. Built on Weebly's website builder.</p>
+  </div>
+</a>
+
+<!-- Project 1 -->
+<a href="https://web.archive.org/web/20211130110338/corgevity.com" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-corgevity-screenshot.png" alt="Project 1">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Corporate Web Design [Corgevity v1]</h3>
+    <p class="text-white text-lg md:text-xl lg:text-2xl">Corgevity provides cybersecurity services. Built on GoDaddy's website builder.</p>
+  </div>
+</a>
+
+<!-- ENDS FORMATTED SECTION -->
+    </section>
+	</main>
+</Layout>
