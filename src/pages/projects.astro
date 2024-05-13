@@ -15,11 +15,11 @@ import DarkMode from "../components/projects/DarkModeWidgetProjects.astro"
 <article class="bg-white dark:bg-[#0D1116] dark:text-white relative border-2 dark:border-[#30363D] lg:col-span-3 md:col-span-3 col-span-2 aspect-auto md:row-span-2 rounded-3xl overflow-hidden p-4 transition duration-300 delay-75 ease-in-out"> 
   <div class="md:w-8/12 p-2 md:px-8 md:py-4 flex flex-col justify-start md:justify-end">
     <div class="flex flex-col md:gap-1 lg:gap-2">
-      <h1 class="text-2xl font-bold md:text-2xl lg:text-3xl">inwrk</h1>
-      <h2 class="text-blue-500 text-4xl font-bold lg:text-7xl">PROJECTS</h2>
+      <h1 class="text-2xl font-bold md:text-2xl lg:text-3xl">always a WIP</h1>
+      <h2 class="text-blue-500 text-5xl font-bold lg:text-7xl">PROJECTS</h2>
     </div>
-    <p class="pt-2 text-lg lg:pt-4 lg:text-xl">oh god, you found my projects! i am no pro and just make stuff as a hobby.</p>
   </div>
+  <p class="px-2 md:px-8 text-lg lg:text-xl">you found my projects! disclaimer: i'm no pro and really just make stuff as a hobby. 😜</p>
 </article>
 
 <!-- Back Button Widget -->
@@ -36,61 +36,29 @@ import DarkMode from "../components/projects/DarkModeWidgetProjects.astro"
 <!-- Dark Mode Widget -->
 <DarkMode/>
 
-<!-- Project 13 -->
-<a href="https://ambercaravalho.github.io/personal-site-v4/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
-  <div class="w-full h-full bg-[#00000077] absolute">
-    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-v4-screenshot.jpg" alt="Project 13">
-  </div>
-  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
-    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M17 7l-10 10"></path>
-      <path d="M8 7l9 0l0 9"></path>
-    </svg>
-  </div>
-  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
-    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Current Website [Version 4]</h3>
-    <p class="text-white text-lg md:text-xl lg:text-2xl">The fourth version of my portfolio, designed in the bento box style and written in the Astro framework.</p>
-  </div>
-</a>
+<!-- Navigation -->
+<section class="flex flex-col relative justify-center text-center items-center p-4 border-2 dark:border-[#30363D] rounded-2xl bg-orange-300 dark:bg-orange-400 text-black text-2xl lg:text-3xl nav-links w-full aspect-auto lg:col-span-4 md:col-span-4 col-span-2">
+  <p class="flex bold underline gap-8 hidden sm:block">
+    <a href="#featured">Featured</a>
+    <a href="#fun">Fun Projects</a>
+    <a href="#business">Web Design</a>
+    <a href="#personal">Personal Sites</a>
+  </p>
+  <p class="flex bold underline gap-4 md:hidden lg:hidden">
+    <a href="#featured">Featured</a>
+    <a href="#fun">Fun Projects</a>
+  </p>
+  <p class="flex bold underline gap-4 md:hidden lg:hidden">
+    <a href="#business">Web Design</a>
+    <a href="#personal">Personal Sites</a>
+  </p>
+</section>
 
-<!-- Project 12 -->
-<a href="https://webgl.ambercaravalho.com" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
-  <div class="w-full h-full bg-[#00000077] absolute">
-    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/webgl-screenshot.png" alt="Project 12">
-  </div>
-  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
-    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M17 7l-10 10"></path>
-      <path d="M8 7l9 0l0 9"></path>
-    </svg>
-  </div>
-  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
-    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Project Web Design [WebGL Experiments]</h3>
-    <p class="text-white text-lg md:text-xl lg:text-2xl">Messing around (and learning) with WebGL. Built with Three.js and Ammo.js.</p>
-  </div>
-</a>
+<!-- FEATURED -->
+<section class="flex flex-col border-[#A6A6A6] dark:border-white relative rounded-2xl border-2 text-black dark:text-white nav-links w-full aspect-auto lg:col-span-4 md:col-span-4 col-span-2 gap-2 md:gap-4 p-4">
+  <h1 class="text-2xl lg:text-4xl" id="featured">✨ Featured ✨</h1>
 
-<!-- Project 11 -->
-<a href="https://clock.ambercaravalho.com" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
-  <div class="w-full h-full bg-[#00000077] absolute">
-    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/authorclock-screenshot.jpg" alt="Project 11">
-  </div>
-  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
-    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M17 7l-10 10"></path>
-      <path d="M8 7l9 0l0 9"></path>
-    </svg>
-  </div>
-  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
-    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Project Web Design [Open Author Clock]</h3>
-    <p class="text-white text-lg md:text-xl lg:text-2xl">A project to bring literary quotes to every minute of your day. Built on HTML, CSS, and JavaScript.</p>
-  </div>
-</a>
-
-<!-- Project 10 -->
+<!-- POGPT Suite -->
 <a href="https://pogpt.ambercaravalho.com" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
   <div class="w-full h-full bg-[#00000077] absolute">
     <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/pogpt-screenshot.jpg" alt="Project 10">
@@ -103,84 +71,12 @@ import DarkMode from "../components/projects/DarkModeWidgetProjects.astro"
     </svg>
   </div>
   <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
-    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Application Development [POGPT Suite]</h3>
-    <p class="text-white text-lg md:text-xl lg:text-2xl">The Portable Operational GPT Suite. Built on Docker, Open WebUI, Ollama, and LLaVA.</p>
+    <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold">POGPT Suite</h3>
+    <p class="text-white text-md md:text-xl lg:text-2xl">POGPT's MVP, a portable or classified LLM solution; built with Open WebUI and Ollama.</p>
   </div>
 </a>
 
-<!-- Project 9 -->
-<a href="https://corgevity.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
-  <div class="w-full h-full bg-[#00000077] absolute">
-    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/corgevity_new-screenshot.png" alt="Project 9">
-  </div>
-  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
-    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M17 7l-10 10"></path>
-      <path d="M8 7l9 0l0 9"></path>
-    </svg>
-  </div>
-  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
-    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Corporate Web Design [Corgevity]</h3>
-    <p class="text-white text-lg md:text-xl lg:text-2xl">Corgevity provides cybersecurity services. Built on WordPress 6.3 in the Gutenberg editor.</p>
-  </div>
-</a>
-
-<!-- Project 8 -->
-<a href="https://v3.ambercaravalho.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
-  <div class="w-full h-full bg-[#00000077] absolute">
-    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-v3-screenshot.jpg" alt="Project 8">
-  </div>
-  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
-    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M17 7l-10 10"></path>
-      <path d="M8 7l9 0l0 9"></path>
-    </svg>
-  </div>
-  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
-    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">The Vault [Version 3]</h3>
-    <p class="text-white text-lg md:text-xl lg:text-2xl">The third version of ambercaravalho.com. Built on WordPress 6.3 in the Gutenberg editor.</p>
-  </div>
-</a>
-
-<!-- Project 7 -->
-<a href="https://jblecybergames.ambercaravalho.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
-  <div class="w-full h-full bg-[#00000077] absolute">
-    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-jblecybergames-screenshot.png" alt="Project 7">
-  </div>
-  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
-    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M17 7l-10 10"></path>
-      <path d="M8 7l9 0l0 9"></path>
-    </svg>
-  </div>
-  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
-    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Event Web Design [JBLE Cyber Games]</h3>
-    <p class="text-white text-lg md:text-xl lg:text-2xl">Promoting the JBLE Cyber Games CTF event. Built on WordPress 6.3 in the Gutenberg editor.</p>
-  </div>
-</a>
-
-<!-- Project 6 -->
-<a href="https://v2.ambercaravalho.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
-  <div class="w-full h-full bg-[#00000077] absolute">
-    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-v2-screenshot.png" alt="Project 7">
-  </div>
-  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
-    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M17 7l-10 10"></path>
-      <path d="M8 7l9 0l0 9"></path>
-    </svg>
-  </div>
-  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
-    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">The Vault [Version 2]</h3>
-    <p class="text-white text-lg md:text-xl lg:text-2xl">The second version of ambercaravalho.com. Built on WordPress 6.2 in the Gutenberg editor.</p>
-  </div>
-</a>
-
-<!-- Project 5 -->
+<!-- Project Exodus -->
 <a href="https://bravoexodus.com" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
   <div class="w-full h-full bg-[#00000077] absolute">
     <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-exodus-screenshot.png" alt="Project 5">
@@ -193,15 +89,20 @@ import DarkMode from "../components/projects/DarkModeWidgetProjects.astro"
     </svg>
   </div>
   <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
-    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Application Development [Project Exodus]</h3>
-    <p class="text-white text-lg md:text-xl lg:text-2xl">Project Exodus is a human capital management solution. Built on Docker and Apache Superset.</p>
+    <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold">Project Exodus</h3>
+    <p class="text-white text-md md:text-xl lg:text-2xl">Project Exodus's MVP, a human capital management solution; built with Docker and Superset.</p>
   </div>
 </a>
+</section>
 
-<!-- Project 4 -->
-<a href="https://web.archive.org/web/20230513131828/https://ambercaravalho.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+<!-- FUN PROJECTS -->
+<section class="flex flex-col border-[#A6A6A6] dark:border-white relative rounded-2xl border-2 text-black dark:text-white nav-links w-full aspect-auto lg:col-span-4 md:col-span-4 col-span-2 gap-2 md:gap-4 p-4">
+  <h1 class="text-2xl lg:text-4xl" id="fun">🎆 Fun Projects 🎆</h1>
+
+<!-- WebGL Experiments -->
+<a href="https://webgl.ambercaravalho.com" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
   <div class="w-full h-full bg-[#00000077] absolute">
-    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-v1-screenshot.png" alt="Project 4">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/webgl-screenshot.png" alt="Project 12">
   </div>
   <div class="absolute top-2 right-2 bg-white rounded-full p-1">
     <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -211,12 +112,71 @@ import DarkMode from "../components/projects/DarkModeWidgetProjects.astro"
     </svg>
   </div>
   <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
-    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">The Vault [Version 1]</h3>
-    <p class="text-white text-lg md:text-xl lg:text-2xl">The original version of ambercaravalho.com. Built on WordPress 6.1 in the Gutenberg editor.</p>
+    <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold">WebGL Experiments</h3>
+    <p class="text-white text-md md:text-xl lg:text-2xl">Messing around (and learning) with WebGL technologies in the browser; built with Three.js and Ammo.js.</p>
   </div>
 </a>
 
-<!-- Project 3 -->
+<!-- Open Author Clock -->
+<a href="https://clock.ambercaravalho.com" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/authorclock-screenshot.jpg" alt="Project 11">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold">Open Author Clock</h3>
+    <p class="text-white text-md md:text-xl lg:text-2xl">A personal project to bring literary quotes to every minute of the day; built on HTML and JavaScript.</p>
+  </div>
+</a>
+
+<!-- JBLE Cyber Games -->
+<a href="https://jblecybergames.ambercaravalho.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-jblecybergames-screenshot.png" alt="Project 7">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold">JBLE Cyber Games CTF</h3>
+    <p class="text-white text-md md:text-xl lg:text-2xl">The JBLE Cyber Games CTF site, built to promote the event and designed in WordPress</p>
+  </div>
+</a>
+</section>
+
+<!-- BUSINESS WEB DESIGN -->
+<section class="flex flex-col border-[#A6A6A6] dark:border-white relative rounded-2xl border-2 text-black dark:text-white nav-links w-full aspect-auto lg:col-span-4 md:col-span-4 col-span-2 gap-2 md:gap-4 p-4">
+  <h1 class="text-2xl lg:text-4xl" id="business">🏙️ Business Web Design 🏙️</h1>
+
+<!-- Corgevity [v2] -->
+<a href="https://corgevity.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/corgevity_new-screenshot.png" alt="Project 9">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold">Corgevity v2</h3>
+    <p class="text-white text-md md:text-xl lg:text-2xl">Corgevity's second corporate site, built to promote cybersecurity and designed in WordPress.</p>
+  </div>
+</a>
+
+<!-- MaryMotivates -->
 <a href="https://web.archive.org/web/20210622024457/https://marymotivates.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
   <div class="w-full h-full bg-[#00000077] absolute">
     <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-marymotivates-screenshot.png" alt="Project 3">
@@ -229,12 +189,12 @@ import DarkMode from "../components/projects/DarkModeWidgetProjects.astro"
     </svg>
   </div>
   <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
-    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Organization Web Design [MaryMotivates]</h3>
-    <p class="text-white text-lg md:text-xl lg:text-2xl">MaryMotivates motivated and empowered local youth. Built on WordPress 5.0 in the Divi editor.</p>
+    <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold">MaryMotivates</h3>
+    <p class="text-white text-md md:text-xl lg:text-2xl">Major revisions to the MaryMotivates site, better empowering local youth and designed in WordPress.</p>
   </div>
 </a>
 
-<!-- Project 2 -->
+<!-- SWZ Service -->
 <a href="http://www.services4fitnessequipment.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
   <div class="w-full h-full bg-[#00000077] absolute">
     <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-swzservice-screenshot.png" alt="Project 2">
@@ -247,12 +207,12 @@ import DarkMode from "../components/projects/DarkModeWidgetProjects.astro"
     </svg>
   </div>
   <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
-    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Business Web Design [SWZ Service]</h3>
-    <p class="text-white text-lg md:text-xl lg:text-2xl">SWZ Service provides cycling, fitness, and snow repair. Built on Weebly's website builder.</p>
+    <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold">SWZ Service</h3>
+    <p class="text-white text-md md:text-xl lg:text-2xl">SWZ Service's rebuilt corporate site, promoting their equipment repair offerings and designed in Weebly.</p>
   </div>
 </a>
 
-<!-- Project 1 -->
+<!-- Corgevity [v1] -->
 <a href="https://web.archive.org/web/20211130110338/corgevity.com" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 lg:col-span-4 md:col-span-4 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
   <div class="w-full h-full bg-[#00000077] absolute">
     <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-corgevity-screenshot.png" alt="Project 1">
@@ -265,10 +225,90 @@ import DarkMode from "../components/projects/DarkModeWidgetProjects.astro"
     </svg>
   </div>
   <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
-    <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">Corporate Web Design [Corgevity v1]</h3>
-    <p class="text-white text-lg md:text-xl lg:text-2xl">Corgevity provides cybersecurity services. Built on GoDaddy's website builder.</p>
+    <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold">Corgevity [v1]</h3>
+    <p class="text-white text-md md:text-xl lg:text-2xl">Corgevity's first corporate site, built to promote cybersecurity and designed in GoDaddy.</p>
   </div>
 </a>
+</section>
+
+<!-- PERSONAL SITES -->
+<section class="flex flex-col border-[#A6A6A6] dark:border-white relative rounded-2xl border-2 text-black dark:text-white nav-links w-full aspect-auto lg:col-span-4 md:col-span-4 col-span-2 gap-2 md:gap-4 p-4">
+  <h1 class="text-2xl lg:text-4xl" id="personal">💁‍♀️ Personal Sites 💁‍♀️</h1>
+  <section class="grid max-w-screen-lg lg:grid-cols-4 md:grid-cols-4 grid-cols-2 gap-2 md:gap-4">
+
+<!-- Personal Site v4 -->
+<a href="https://ambercaravalho.github.io/personal-site-v4/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-v4-screenshot.jpg" alt="Project 13">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold">Personal Site v4</h3>
+    <p class="text-white text-md md:text-xl lg:text-2xl">The fourth version of my portfolio, designed in the bento box style and written in the Astro framework.</p>
+  </div>
+</a>
+
+<!-- Personal Site v3 -->
+<a href="https://v3.ambercaravalho.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-v3-screenshot.jpg" alt="Project 8">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold">Personal Site v3</h3>
+    <p class="text-white text-md md:text-xl lg:text-2xl">The third version of my portfolio, replicating the cards interface and designed in WordPress.</p>
+  </div>
+</a>
+
+<!-- Personal Site v2 -->
+<a href="https://v2.ambercaravalho.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-v2-screenshot.png" alt="Project 7">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold">Personal Site v2</h3>
+    <p class="text-white text-md md:text-xl lg:text-2xl">The second version of my portfolio, designed like a *nix Bash terminal and designed in WordPress.</p>
+  </div>
+</a>
+
+<!-- Personal Site v1 -->
+<a href="https://web.archive.org/web/20230513131828/https://ambercaravalho.com/" class="relative border-2 dark:border-[#30363D] text-white rounded-2xl w-full lg:h-48 md:h-48 h-40 col-span-2 overflow-hidden lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="w-full h-full bg-[#00000077] absolute">
+    <img loading="lazy" class="absolute object-cover object-center bottom-0 left-0 -z-10" style="color:transparent" src="/assets/projects/archive-v1-screenshot.png" alt="Project 4">
+  </div>
+  <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+    </svg>
+  </div>
+  <div class="w-full h-full absolute top-2 left-2 text-white p-4 z-10 pointer-events-none">
+    <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold">Personal Site v1</h3>
+    <p class="text-white text-md md:text-xl lg:text-2xl">The first version of my portfolio, based on similar colorful sites and designed in WordPress.</p>
+  </div>
+</a>
+</section>
+</section>
 
 <!-- ENDS FORMATTED SECTION -->
     </section>
