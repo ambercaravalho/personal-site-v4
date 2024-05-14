@@ -4,7 +4,7 @@
 import Layout from '../layouts/Layout.astro';
 
 import DarkMode from "../components/index/DarkModeWidget.astro"
-import { SpotifyStatus } from "../components/index//SpotifyWidget"
+import { SpotifyStatus } from "../components/index/SpotifyWidget"
 import ShowTime from "../components/index/WeatherWidget"
 ---
 
@@ -33,7 +33,7 @@ import ShowTime from "../components/index/WeatherWidget"
 <!-- LinkedIn Widget -->
 <a href="https://www.linkedin.com/in/ambercaravalho/" class="bg-[#0077b6] border-2 dark:border-[#30363D] dark:bg-[#0353a4] text-white flex flex-col justify-center items-center rounded-2xl relative col-span-1 lg:aspect-square md:aspect-square md:h-auto lg:h-auto h-28 text-center p-4 lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
   <div class="sm:scale-175">
-    <svg xmlns="http://www.w3.org/2000/svg"  class="inline-flex w-14 md:w-10" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg"  class="inline-flex w-14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
       <path d="M8 11l0 5"></path>
@@ -94,30 +94,32 @@ import ShowTime from "../components/index/WeatherWidget"
   </div>
 </article>
 
-<!-- Stacked Widgets //PLACEHOLDERS: REPLACE WITH OTHER WIDGETS IN THE FUTURE -->
+<!-- Stacked Widgets -->
 <article class="col-span-1 sm:col-span-1 flex flex-col justify-between gap-2 md:gap-4">
-  <a href="https://www.linkedin.com/in/ambercaravalho/" class="bg-[#0077b6]  border-2 dark:border-[#30363D] dark:bg-[#0353a4] text-white flex flex-col justify-center items-center rounded-2xl relative col-span-1 aspect-square text-center p-4 lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
-    <div class="sm:scale-175">
-      <svg xmlns="http://www.w3.org/2000/svg"  class="inline-flex w-14 md:w-10" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- CSAP Widget -->
+  <a href="https://www.credly.com/org/comptia/badge/comptia-security-analytics-professional-csap-stackable-certification" class="relative aspect-square rounded-2xl col-span-1 row-span-1 overflow-hidden border-2 dark:border-[#30363D] lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+    <div class="absolute w-full h-full bg-white">
+      <img loading="lazy" class="absolute w-full h-full scale-90 object-cover object-center top-0 left-0" style="color:transparent" src="/assets/index/comptia_csap_logo.png" alt="CompTIA CSAP Logo">
+    </div>
+    <div class="absolute top-2 right-2 bg-black rounded-full p-1">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-white" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
-        <path d="M8 11l0 5"></path>
-        <path d="M8 8l0 .01"></path>
-        <path d="M12 16l0 -5"></path>
-        <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+        <path d="M17 7l-10 10"></path>
+        <path d="M8 7l9 0l0 9"></path>
       </svg>
     </div>
   </a>
 
-  <a href="https://www.linkedin.com/in/ambercaravalho/" class="bg-[#0077b6]  border-2 dark:border-[#30363D] dark:bg-[#0353a4] text-white flex flex-col justify-center items-center rounded-2xl relative col-span-1 aspect-square text-center p-4 lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
-    <div class="sm:scale-175">
-      <svg xmlns="http://www.w3.org/2000/svg"  class="inline-flex w-14 md:w-10" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- UAGC Widget -->
+  <a href="https://www.uagc.edu/online-degrees/bachelors/cyber-data-security-technology" class="relative aspect-square rounded-2xl col-span-1 row-span-1 overflow-hidden border-2 dark:border-[#30363D] lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+    <div class="absolute w-full h-full bg-[#0c234c]">
+      <img loading="lazy" class="absolute w-full h-full scale-90 object-cover object-center top-0 left-0" style="color:transparent" src="/assets/index/uagc_logo.jpg" alt="UAGC Logo">
+    </div>
+    <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
-        <path d="M8 11l0 5"></path>
-        <path d="M8 8l0 .01"></path>
-        <path d="M12 16l0 -5"></path>
-        <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+        <path d="M17 7l-10 10"></path>
+        <path d="M8 7l9 0l0 9"></path>
       </svg>
     </div>
   </a>
@@ -128,9 +130,12 @@ import ShowTime from "../components/index/WeatherWidget"
   <ShowTime client:visible/>
 </article>
 
-<!-- Experience Widget -->
-<article class="rounded-2xl flex relative overflow-hidden aspect-square shadow-sm bg-[#6DD2B7] p-4 text-white justify-center items-center border-2 dark:border-[#30363D] dark:bg-[#0D1116] transition duration-300 delay-75 ease-in-out">
-  <div class="flex justify-center items-center flex-col">
+<!-- Pride Widget -->
+<article class="rounded-2xl flex relative overflow-hidden aspect-square col-span-1 row-span-1 border-2 dark:border-[#30363D]">
+  <div class="absolute w-full h-full -z-10">
+    <img loading="lazy" class="absolute w-full h-full object-cover object-center top-0 left-0 -z-10" style="color:transparent" src="/assets/index/sheher_logo.png" alt="She/Her Logo">
+  </div>
+  <div class="flex justify-center items-center flex-col -z-20">
     <p class="text-6xl md:text-8xl font-bold">5+</p>
     <p class="text-lg md:text-xl uppercase font-semibold text-center">years of experience</p>
   </div>
@@ -138,8 +143,8 @@ import ShowTime from "../components/index/WeatherWidget"
 
 <!-- Contact Widget -->
 <a href="/assets/index/amber-caravalho-contact-card.vcf" download="amber-caravalho-contact-card.vcf" class="border-2 bg-[#E96A97] text-white dark:border-[#30363D] dark:bg-[#0D1116] dark:text-white rounded-2xl relative w-full p-4 col-span-1 flex flex-col justify-center items-center aspect-square text-center font-bold lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out">
-  <div class="absolute top-3 right-3 dark:bg-white rounded-full p-1">
-    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-white dark:stroke-black w-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <div class="absolute top-3 right-3 bg-white dark:bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black dark:stroke-black w-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
       <path d="M7 11l5 5l5 -5"></path>
@@ -150,15 +155,15 @@ import ShowTime from "../components/index/WeatherWidget"
       <p class="lg:text-xl md:text-xl text-lg font-bold">Add Contact</p>
     </div>
       <div class="sm:scale-175">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="inline-flex w-12 md:w-10"><path stroke-linecap="round" stroke-linejoin="round" d="M4,21a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H5A1,1,0,0,0,4,3ZM12,7.5a2,2,0,1,1-2,2A2,2,0,0,1,12,7.5ZM8.211,16.215a4,4,0,0,1,7.578,0A.993.993,0,0,1,14.83,17.5H9.18A1,1,0,0,1,8.211,16.215Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="inline-flex w-12"><path stroke-linecap="round" stroke-linejoin="round" d="M4,21a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H5A1,1,0,0,0,4,3ZM12,7.5a2,2,0,1,1-2,2A2,2,0,0,1,12,7.5ZM8.211,16.215a4,4,0,0,1,7.578,0A.993.993,0,0,1,14.83,17.5H9.18A1,1,0,0,1,8.211,16.215Z"></path></svg>
       </div>
   </div>
 </a>
 
 <!-- Resume Widget -->
-<a href="/assets/index/ambercaravalho-resume.pdf" class="border-2 bg-white dark:border-[#30363D] dark:bg-[#0D1116] dark:text-white rounded-2xl relative w-full p-4 col-span-1 flex flex-col justify-center items-center aspect-square text-center font-bold lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
-  <div class="absolute top-3 right-3 dark:bg-white rounded-full p-1">
-    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black w-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<a href="/assets/index/ambercaravalho-resume.pdf" class="border-2 bg-[#6DD2B7] dark:border-[#30363D] dark:bg-[#0D1116] dark:text-white text-white rounded-2xl relative w-full p-4 col-span-1 flex flex-col justify-center items-center aspect-square text-center font-bold lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
+  <div class="absolute top-3 right-3 bg-white dark:bg-white rounded-full p-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black dark:stroke-black w-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
       <path d="M7 11l5 5l5 -5"></path>
@@ -169,7 +174,7 @@ import ShowTime from "../components/index/WeatherWidget"
       <p class="lg:text-xl md:text-xl text-lg font-bold">My Resume</p>
     </div>
       <div class="sm:scale-175">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="inline-flex w-14 md:w-10"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="inline-flex w-14"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
       </div>
   </div>
 </a>
@@ -177,7 +182,7 @@ import ShowTime from "../components/index/WeatherWidget"
 <!-- Email Widget -->
 <a class="border-2 bg-orange-400 dark:border-[#30363D] dark:bg-[#0D1116] dark:text-white text-white rounded-2xl relative w-full p-4 col-span-1 flex flex-col justify-center items-center aspect-square text-center lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" href="mailto:me@ambercaravalho.com" target="_blank">
   <div class="absolute top-3 right-3 bg-white rounded-full p-1">
-     <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black w-4" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+     <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black w-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <path d="M17 7l-10 10"></path>
       <path d="M8 7l9 0l0 9"></path>
@@ -187,7 +192,7 @@ import ShowTime from "../components/index/WeatherWidget"
     <p class="lg:text-xl md:text-xl text-lg font-bold">Email Me</p>
   </div>
     <div class="sm:scale-175">
-      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-white inline-flex w-14 md:w-10" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-white inline-flex w-14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
         <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
         <path d="M3 7l9 6l9 -6"></path>

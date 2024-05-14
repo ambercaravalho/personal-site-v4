@@ -11,15 +11,44 @@
 </div>
 
 ## Overview 🖥️
-Every six months or so I get inspired by a new design and choose to entirely scrap the old version of my personal portfolio site. This is the fourth (!) revision of that process; check out some of my prior versions here:
 
-- [Version 1 (Built on WordPress 6.1)](https://web.archive.org/web/20230513131828/https://ambercaravalho.com/)
-    - I learned a bunch about self-hosting servers as well as the first shreds of web design.
-- [Version 2 (Built on WordPress 6.2)](https://v2.ambercaravalho.com)
-    - I wanted to replicate a *nix Bash terminal through its use of text-based user interface elements.
-- [Version 3 (Built on WordPress 6.3)](https://v3.ambercaravalho.com)
-    - Inspired by a post on Reddit and with too much time on my hands, the slides interface was born.
+Welcome to the fourth iteration of my personal portfolio site! Every six months, I get inspired by a new design and completely revamp my site. This version is built with [Astro](https://astro.build), a framework that has made integrating React components much easier (or so I've heard). 
 
-## Get To The Point! 😡
+You can take a look back at previous versions on the [projects page](https://ambercaravalho.github.io/personal-site-v4/projects#personal) of my site.
 
-Okay, okay!! I'm kicking WordPress to the curb and diving headfirst into a shiny new framework (for the first time)! After some epic flip-flopping, I've landed on [Astro](https://astro.build) because it makes dealing with React components a breeze (or so I've been told 😰). Feel free to watch me fumble around as I navigate this new world of development!
+## Purpose 🌟
+
+This project is (supposed to) help me grow as a developer. With each new version, I aim to learn and implement new technologies and design principles. This time, I’ve chosen Astro for its ease of use and modern capabilities. My portfolio showcases my projects, LinkedIn, GitHub, and an About Me section, all arranged in a bento box grid style.
+
+## Setup Guide ⚙️
+
+To get this project up and running on your local machine, follow these steps:
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/ambercaravalho/personal-site-v4.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd personal-site-v4
+    ```
+3. Install the dependencies:
+    ```sh
+    npm install
+    ```
+4. Start the development server:
+    ```sh
+    npm run astro dev
+    ```
+
+You should now see the site running locally. Feel free to explore, modify, and learn from it!
+
+## Future Plans 🚀
+
+As I continue to evolve this portfolio, I plan to:
+
+- [ ] Create information pages for each project.
+- [ ] Develop animations for widgets upon page load.
+- [ ] Add a footer to each page.
+
+Thanks for checking out my project! Any feedback or suggestions are welcome.
