@@ -6,6 +6,12 @@ import Layout from '../layouts/Layout.astro';
 import DarkMode from "../components/index/DarkModeWidget.astro"
 import { SpotifyStatus } from "../components/index/SpotifyWidget"
 import ShowTime from "../components/index/WeatherWidget"
+
+import { Image } from 'astro:assets';
+import memojiAvatar from '../assets/index/photo-large.png';
+import comptiaBadge from '../assets/index/comptia-csap-logo.png';
+import uagcLogo from '../assets/index/uagc-logo.jpg';
+import sheherLogo from '../assets/index/sheher-logo.png';
 ---
 
 <!-- BEGINS FORMATTED SECTION -->
@@ -16,7 +22,7 @@ import ShowTime from "../components/index/WeatherWidget"
 <!-- About Me Widget -->
 <article class="bg-white dark:bg-[#0D1116] dark:text-white relative border-2 dark:border-[#30363D] lg:col-span-3 md:col-span-3 col-span-2 aspect-auto md:row-span-2 rounded-3xl overflow-hidden p-4 transition duration-300 delay-75 ease-in-out"> 
   <div class="lg:float-right md:float-right float-center lg:pt-16 pr-2">
-    <img loading="lazy" class="w-auto h-20 md:h-40 lg:h-48" src="assets/index/photo-large.png" alt="Avatar Amber Caravalho">
+    <Image src={memojiAvatar} alt="Avatar Amber Caravalho" class="w-auto h-20 md:h-40 lg:h-48" />
   </div>
   <div class="lg:absolute lg:bottom-16">
     <div class="md:w-8/12 p-2 md:px-8 md:py-4 flex flex-col justify-start md:justify-end">
@@ -99,7 +105,7 @@ import ShowTime from "../components/index/WeatherWidget"
   <!-- CSAP Widget -->
   <a href="https://www.credly.com/org/comptia/badge/comptia-security-analytics-professional-csap-stackable-certification" class="relative aspect-square rounded-2xl col-span-1 row-span-1 overflow-hidden border-2 dark:border-[#30363D] lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
     <div class="absolute w-full h-full bg-white">
-      <img loading="lazy" class="absolute w-full h-full scale-90 object-cover object-center top-0 left-0" style="color:transparent" src="/assets/index/comptia_csap_logo.png" alt="CompTIA CSAP Logo">
+      <Image src={comptiaBadge} alt="CompTIA CSAP Logo" class="absolute w-full h-full scale-90 object-cover object-center top-0 left-0" />
     </div>
     <div class="absolute top-2 right-2 bg-black rounded-full p-1">
       <svg xmlns="http://www.w3.org/2000/svg" class="stroke-white" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -113,7 +119,7 @@ import ShowTime from "../components/index/WeatherWidget"
   <!-- UAGC Widget -->
   <a href="https://www.uagc.edu/online-degrees/bachelors/cyber-data-security-technology" class="relative aspect-square rounded-2xl col-span-1 row-span-1 overflow-hidden border-2 dark:border-[#30363D] lg:hover:scale-[103%] transition duration-300 delay-75 ease-in-out" target="_blank" rel="noopener noreferrer">
     <div class="absolute w-full h-full bg-[#0c234c]">
-      <img loading="lazy" class="absolute w-full h-full scale-90 object-cover object-center top-0 left-0" style="color:transparent" src="/assets/index/uagc_logo.jpg" alt="UAGC Logo">
+      <Image src={uagcLogo} alt="UAGC Logo" class="absolute w-full h-full scale-90 object-cover object-center top-0 left-0" />
     </div>
     <div class="absolute top-2 right-2 bg-white rounded-full p-1">
       <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -133,7 +139,7 @@ import ShowTime from "../components/index/WeatherWidget"
 <!-- Pride Widget -->
 <article class="rounded-2xl flex relative overflow-hidden aspect-square col-span-1 row-span-1 border-2 dark:border-[#30363D]">
   <div class="absolute w-full h-full -z-10">
-    <img loading="lazy" class="absolute w-full h-full object-cover object-center top-0 left-0 -z-10" style="color:transparent" src="/assets/index/sheher_logo.png" alt="She/Her Logo">
+    <Image src={sheherLogo} alt="She/Her Logo" class="absolute w-full h-full object-cover object-center top-0 left-0 -z-10" />
   </div>
   <div class="flex justify-center items-center flex-col -z-20">
     <p class="text-6xl md:text-8xl font-bold">5+</p>
