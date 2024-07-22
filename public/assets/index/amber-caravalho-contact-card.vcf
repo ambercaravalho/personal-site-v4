@@ -4,10 +4,9 @@ PRODID:-//Apple Inc.//macOS 14.4.1//EN
 N:Caravalho;Amber;;;
 FN:Amber Caravalho
 X-PHONETIC-LAST-NAME:Car-Rah-Vah-Low
-item1.EMAIL;type=INTERNET;type=pref:me@ambercaravalho.com
-item1.X-ABLabel:personal
-EMAIL;type=INTERNET;type=WORK:amber.caravalho@t-mobile.com
-TEL;type=IPHONE;type=CELL;type=VOICE;type=pref:(415) 993-0312
+item1.EMAIL;type=INTERNET;type=pref:hello@ambercaravalho.com
+item1.X-ABLabel:let's connect!
+TEL;type=CELL;type=VOICE:(206) 552-9554
 item2.URL;type=pref:https://ambercaravalho.com
 item2.X-ABLabel:_$!<HomePage>!$_
 item3.URL:https://www.linkedin.com/in/ambercaravalho
