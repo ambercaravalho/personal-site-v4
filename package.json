@@ -10,12 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.10",
-    "@astrojs/preact": "^6.0.5",
-    "@tailwindcss/vite": "^4.3.3",
-    "astro": "^7.3.2",
-    "preact": "^10.29.8",
-    "tailwindcss": "^4.3.3",
+    "@astrojs/check": "^0.9.12",
+    "@astrojs/preact": "^6.1.6",
+    "@tailwindcss/vite": "^4.3.5",
+    "astro": "^7.4.13",
+    "preact": "^11.2.0",
+    "tailwindcss": "^4.3.5",
     "typescript": "^6.0.3"
   }
 }
